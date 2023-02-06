@@ -12,20 +12,6 @@ type Product struct {
 func main() {
 	addToCard(Product{"Трусы", "Белый", 100, 1}, 10)
 	addToCard(Product{"Футболка", "Черный", 200, 10}, 5)
-<<<<<<< HEAD
-=======
-}
-
-// TODO: Сделать функцию addToCard
-func addToCard(currentProduct Product, count uint16) {
-	if currentProduct.Quantity < count {
-		var result uint16 = count - currentProduct.Quantity
-		fmt.Printf("Не хватает %d ед. товара \"%s\" \n", result, currentProduct.Name)
-	} else {
-		var sum uint16 = currentProduct.Price * count
-		fmt.Printf("Вы заказали %d ед. товара '%s' на сумму %d \n", count, currentProduct.Name, sum)
-	}
->>>>>>> 1d2b2be873d9a888085ff90d383e7f091251c978
 }
 
 // TODO: Сделать функцию addToCard

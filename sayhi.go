@@ -12,14 +12,15 @@ type Product struct {
 func main() {
 	// addToCard(Product{"Трусы", "Белый", 100, 1}, 10)
 	// addToCard(Product{"Футболка", "Черный", 200, 10}, 5)
-	calculator(calc{10, 2, "+"})
-	calculator(calc{10, 0, "+"})
-	calculator(calc{10, 2, "-"})
-	calculator(calc{10, 0, "-"})
-	calculator(calc{10, 2, "*"})
-	calculator(calc{10, 0, "*"})
-	calculator(calc{10, 2, "/"})
-	calculator(calc{10, 0, "/"})
+	calculator(calc{20, 0, "/"})
+	calculator(calc{20, 4, "+"})
+	calculator(calc{30, 0, "+"})
+	calculator(calc{30, 6, "-"})
+	calculator(calc{40, 0, "-"})
+	calculator(calc{50, 8, "*"})
+	calculator(calc{60, 0, "*"})
+	calculator(calc{70, 10, "/"})
+
 }
 
 // TODO: Сделать функцию addToCard
@@ -46,11 +47,14 @@ func calculator(newCalc calc) {
 	// 	fmt.Println("Ошибка вывода")
 	case "+":
 		fmt.Println(newCalc.X + newCalc.Y)
+		return
 	case "-":
 		fmt.Println(newCalc.X - newCalc.Y)
+		return
 	case "*":
 		{
 			fmt.Println(newCalc.X * newCalc.Y)
+			return
 		}
 	case "/":
 		if newCalc.Y == 0 {
@@ -58,5 +62,6 @@ func calculator(newCalc calc) {
 			return
 		}
 		fmt.Println(newCalc.X / newCalc.Y)
+		return
 	}
 }

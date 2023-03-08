@@ -39,6 +39,7 @@ func addToCard(currentProduct Product, count uint16) {
 	}
 }
 
+// TODO: 08.03.2023 ОПРЕДЕЛИТЬ И ДОБАВИТЬ ФУНКЦИЮ ИЛИ МЕТОД ДЛЯ ОБНОВЛЕНИЯ КОЛИЧЕСТВА ТОВАРА НА СКЛАДЕ(УПОР НА МЕТОД)
 // test1
 func (testProduct Product) isShirt() {
 	if testProduct.Name == "Футболка" {

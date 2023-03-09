@@ -9,6 +9,12 @@ type Product struct {
 	Quantity uint16
 }
 
+type Person struct {
+	Name     string
+	Surname  string
+	Lastname string
+}
+
 func main() {
 	testProduct2 := Product{
 		Name:     "Футболка",
@@ -22,11 +28,21 @@ func main() {
 		Price:    100,
 		Quantity: 1,
 	}
+	testPerson := Person{
+		Name:     "Антон",
+		Surname:  "Алексеевич",
+		Lastname: "Максимов",
+	}
+	testPerson.getFullPersonName()
 	addToCard(testProduct3, 10)
 	addToCard(testProduct2, 5)
 	testProduct2.isShirt()
 	testProduct3.isShirt()
 	massive()
+}
+
+func (currentPerson Person) getFullPersonName() {
+	fmt.Printf("%s %s %s\n", currentPerson.Lastname, currentPerson.Name, currentPerson.Surname)
 }
 
 func addToCard(currentProduct Product, count uint16) {
